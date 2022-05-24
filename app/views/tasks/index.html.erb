@@ -1,0 +1,19 @@
+<h1>Tasks</h1>
+
+<ul>
+  <% @tasks.each do |task|%>
+    <li style="list-style: none;">
+      <%= task.completed? ? '✅' : '❌' %>
+      <%= link_to task.title, task_path(task) %>
+      <%= link_to "📝",
+        edit_task_path(task)
+      %>
+      <%= link_to "🗑",
+        task_path(task),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create", new_task_path %>
