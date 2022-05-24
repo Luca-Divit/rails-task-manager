@@ -24,7 +24,7 @@
  }
 
  .container {
-   height: 400px;
+   height: 100%;
    padding: 10px;
    font-family: 'Courier New', Courier, monospace;
    text-align: center;
@@ -34,11 +34,11 @@
  }
 
  a {
-   font-size: large;
+   font-size: 20px;
    text-decoration: none;
    color: black;
  }
 
  a:hover {
-  font-size: larger;
+  font-size: 21px;
  }
